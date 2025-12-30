@@ -9,7 +9,7 @@ export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 left-auto">
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
@@ -28,9 +28,10 @@ export function Chatbot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="hover:bg-white/20 rounded-full p-1 transition-colors"
+                className="ml-auto hover:bg-white/20 rounded-full p-1.5 transition-colors flex-shrink-0"
+                aria-label="Close chat"
               >
-                <X className="w-4 h-4" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
@@ -107,12 +108,9 @@ export function Chatbot() {
         className="w-14 h-14 bg-electric text-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
+        aria-label={isOpen ? "Close chat" : "Open chat"}
       >
-        {isOpen ? (
-          <X className="w-6 h-6" />
-        ) : (
-          <MessageCircle className="w-6 h-6" />
-        )}
+        <MessageCircle className="w-6 h-6" />
       </motion.button>
     </div>
   );

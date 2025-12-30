@@ -6,6 +6,7 @@ import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Chatbot } from "@/components/Chatbot";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({
         <ContactForm />
         <Footer />
         <WhatsAppButton />
+        <Chatbot />
         <VisualEditsMessenger />
       </body>
     </html>

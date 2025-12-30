@@ -59,19 +59,36 @@ export function Footer() {
 
         {/* Contact Info */}
         <div className="space-y-6">
-          <h4 className="font-heading font-bold text-lg mb-6 text-navy">Get in Touch</h4>
+          <h4 className="font-heading font-bold text-lg mb-6 text-navy">Contact Us</h4>
           <div className="space-y-4">
             <div className="flex items-start gap-3 text-navy/60 text-sm">
-              <MapPin className="w-5 h-5 text-electric shrink-0" />
-              <span>123 Silicon Valley Way, San Jose, CA 95134, USA</span>
-            </div>
-            <div className="flex items-center gap-3 text-navy/60 text-sm">
-              <Phone className="w-5 h-5 text-electric shrink-0" />
-              <span>+1 (555) 123-4567</span>
+              <MapPin className="w-5 h-5 text-electric shrink-0 mt-0.5" />
+              <div className="space-y-2">
+                <div>
+                  <p className="font-semibold text-navy mb-1">Bengaluru Office</p>
+                  <p>Solitaire Building, 110/37, 1st Floor</p>
+                  <p>Marathahalli Outer Ring Rd, Marathahalli</p>
+                  <p>Bengaluru, Karnataka 560037</p>
+                </div>
+                <div className="pt-2">
+                  <p className="font-semibold text-navy mb-1">Hyderabad Office</p>
+                  <p>Swathi Plaza Plot No. 1 & 25</p>
+                  <p>Madeenaguda Village, Serilingampalle Mandal</p>
+                  <p>Hyderabad, Telangana 500049</p>
+                </div>
+              </div>
             </div>
             <div className="flex items-center gap-3 text-navy/60 text-sm">
               <Mail className="w-5 h-5 text-electric shrink-0" />
-              <span>contact@semicoretech.com</span>
+              <a href="mailto:info@semicontechs.com" className="hover:text-electric transition-colors">
+                info@semicontechs.com
+              </a>
+            </div>
+            <div className="flex items-center gap-3 text-navy/60 text-sm">
+              <Phone className="w-5 h-5 text-electric shrink-0" />
+              <a href="tel:+919057880578" className="hover:text-electric transition-colors">
+                +91 90578 80578
+              </a>
             </div>
           </div>
         </div>
