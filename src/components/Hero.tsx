@@ -16,14 +16,14 @@ export function Hero() {
       <EnrollmentModal />
       <section className="relative min-h-screen w-full flex items-start justify-center overflow-hidden pt-8 md:pt-12 pb-12">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ 
-            backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop')",
-          }}
-        >
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop')",
+        }}
+      >
           <div className="absolute inset-0 bg-black/50" />
-        </div>
+      </div>
 
         {/* Animated Hero Content */}
         <div className="relative z-10 w-full flex justify-center">
@@ -34,18 +34,18 @@ export function Hero() {
             secondaryButtonText="Explore Our Services"
             badgeText="Next-Gen VLSI Solutions"
           />
-        </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
+      {/* Scroll Indicator */}
+      <motion.div 
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Infinity, duration: 2 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
-        >
-          <span className="text-navy/40 text-[10px] uppercase tracking-[0.3em] font-bold">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-electric to-transparent" />
-        </motion.div>
-      </section>
+      >
+        <span className="text-navy/40 text-[10px] uppercase tracking-[0.3em] font-bold">Scroll</span>
+        <div className="w-px h-12 bg-gradient-to-b from-electric to-transparent" />
+      </motion.div>
+    </section>
     </>
   );
 }

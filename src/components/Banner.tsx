@@ -15,6 +15,9 @@ const bannerItems = [
 export function Banner() {
   return (
     <div className="bg-cyan py-4 overflow-hidden border-y border-navy/10 relative z-20">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <img src="/images/undraw_physics_8tvl.svg" alt="" className="w-full h-full object-cover" />
+      </div>
       <Marquee speed={50} gradient={false}>
         {bannerItems.map((item, index) => (
           <div key={index} className="flex items-center gap-8 px-12">

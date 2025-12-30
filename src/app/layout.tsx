@@ -5,7 +5,8 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Chatbot } from "@/components/Chatbot";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "SemicoreTech | Advanced Semiconductor & VLSI Solutions",
@@ -39,8 +40,9 @@ export default function RootLayout({
         />
         <Navbar />
         <main>{children}</main>
+        <ContactForm />
         <Footer />
-        <Chatbot />
+        <WhatsAppButton />
         <VisualEditsMessenger />
       </body>
     </html>

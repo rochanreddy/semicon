@@ -69,7 +69,10 @@ const courses = [
 export function TopCourses() {
   return (
     <section className="py-24 bg-background relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="absolute top-0 right-0 w-80 h-80 opacity-15 pointer-events-none">
+        <img src="/images/undraw_articles_visl.svg" alt="" className="w-full h-full object-contain" />
+      </div>
+      <div className="max-w-7xl mx-auto px-6 relative">
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -19,6 +19,8 @@ import { TopCourses } from "@/components/TopCourses";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ExpertCard } from "@/components/ExpertCard";
 import { StatCounter } from "@/components/StatCounter";
+import { Testimonials } from "@/components/Testimonials";
+import { WhatWeProvide } from "@/components/WhatWeProvide";
 import { Button } from "@/components/ui/button";
 
 const services = [
@@ -74,31 +76,31 @@ const reasons = [
 
 const experts = [
   {
-    name: "Dr. Sarah Chen",
+    name: "Dr. amarnath",
     role: "Head of VLSI Design",
     expertise: "7nm/5nm FinFET Optimization",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
+    image: "/images/profile-boy.svg",
     linkedin: "#",
   },
   {
     name: "Michael Rodriguez",
     role: "Lead Verification Engineer",
     expertise: "UVM & Formal Verification",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
+    image: "/images/profile-girls.svg",
     linkedin: "#",
   },
   {
     name: "Dr. James Wilson",
     role: "Embedded Systems Architect",
     expertise: "RTOS & Automotive Safety",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    image: "/images/profile-boy.svg",
     linkedin: "#",
   },
   {
     name: "Elena Petrova",
     role: "Physical Design Manager",
     expertise: "STA & Clock Tree Synthesis",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop",
+    image: "/images/profile-girls.svg",
     linkedin: "#",
   },
 ];
@@ -122,7 +124,10 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-24 bg-background relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-electric/10 to-transparent" />
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="absolute top-20 right-0 w-64 h-64 opacity-15 pointer-events-none">
+          <img src="/images/undraw_electricity_iu6d.svg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
@@ -155,9 +160,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* What We Provide Section */}
+      <WhatWeProvide />
+
       {/* Why Choose Us */}
-      <section className="py-24 bg-lite-blue/50 relative">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-background relative">
+        <div className="absolute bottom-0 left-0 w-72 h-72 opacity-10 pointer-events-none">
+          <img src="/images/undraw_team-up_qeem.svg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {reasons.map((reason, index) => (
               <motion.div
@@ -180,8 +191,11 @@ export default function Home() {
       </section>
 
       {/* Experts Section */}
-      <section className="py-24 bg-background relative">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-72 h-72 opacity-5 pointer-events-none">
+          <img src="/images/undraw_select-option_6wly.svg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-navy mb-4">Our VLSI <span className="text-electric">Experts</span></h2>
             <p className="text-navy/60 max-w-2xl mx-auto">Meet the visionaries engineering the next generation of semiconductor technology.</p>
@@ -201,7 +215,10 @@ export default function Home() {
 
       {/* Stats Section */}
       <section className="py-24 bg-lite-blue/30 relative">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="absolute top-10 right-10 w-56 h-56 opacity-20 pointer-events-none">
+          <img src="/images/undraw_project-complete_1zw5.svg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <StatCounter 
@@ -214,9 +231,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
       {/* CTA Strip */}
       <section className="py-20 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-electric/5 blur-3xl rounded-full translate-y-1/2" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 opacity-15 pointer-events-none">
+          <img src="/images/undraw_projections_fhch.svg" alt="" className="w-full h-full object-contain" />
+        </div>
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
