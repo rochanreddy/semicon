@@ -14,6 +14,7 @@ const navItems = [
   { name: "Management", href: "/management" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
+  { name: "enroll courses", href: "/enroll" },
 ];
 
 export function Navbar() {
@@ -39,13 +40,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="bg-electric p-1.5 rounded-lg group-hover:rotate-12 transition-transform shadow-lg shadow-electric/20">
-            <Cpu className="w-6 h-6 text-white" />
           </div>
-          <span className={cn(
-            "font-heading font-bold text-xl tracking-tighter transition-colors",
-            scrolled ? "text-navy" : "text-navy"
-          )}>
-            SEMICORE<span className="text-electric">TECH</span>
+          <span
+            className={cn(
+              "font-heading font-bold text-xl tracking-tighter transition-colors",
+              scrolled ? "text-electric" : "text-electric"
+            )}
+          >
+            SEMICONTECH<span className="text-white"></span>
           </span>
         </Link>
 
@@ -57,7 +59,7 @@ export function Navbar() {
               href={item.href}
               className={cn(
                 "text-sm font-semibold transition-colors hover:text-electric",
-                pathname === item.href ? "text-electric" : "text-navy/70"
+                pathname === item.href ? "text-electric" : "text-electric/80"
               )}
             >
               {item.name}
@@ -70,7 +72,7 @@ export function Navbar() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-navy"
+          className="md:hidden text-electric"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -92,7 +94,7 @@ export function Navbar() {
                 href={item.href}
                 className={cn(
                   "text-lg font-bold py-2 border-b border-slate-100",
-                  pathname === item.href ? "text-electric" : "text-navy/70"
+                  pathname === item.href ? "text-electric" : "text-electric/80"
                 )}
                 onClick={() => setIsOpen(false)}
               >

@@ -5,6 +5,7 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Chatbot } from "@/components/Chatbot";
 
 export const metadata: Metadata = {
   title: "SemicoreTech | Advanced Semiconductor & VLSI Solutions",
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased bg-navy text-white selection:bg-cyan selection:text-navy">
+      <body className="antialiased bg-navy text-white selection:bg-cyan selection:text-navy" suppressHydrationWarning>
         <Script
           id="orchids-browser-logs"
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Chatbot />
         <VisualEditsMessenger />
       </body>
     </html>

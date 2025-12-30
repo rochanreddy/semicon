@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Banner } from "@/components/Banner";
+import { TopCourses } from "@/components/TopCourses";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ExpertCard } from "@/components/ExpertCard";
 import { StatCounter } from "@/components/StatCounter";
@@ -114,6 +115,9 @@ export default function Home() {
     <div className="flex flex-col w-full bg-background">
       <Hero />
       <Banner />
+
+      {/* Top Courses Section */}
+      <TopCourses />
 
       {/* Services Section */}
       <section className="py-24 bg-background relative overflow-hidden">
